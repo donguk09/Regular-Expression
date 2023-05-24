@@ -41,11 +41,29 @@
 
 # 3. 정규 표현식 사용 예제(python)
 
-This is a normal paragraph:
+1. Matching Dates in "YYYY-MM-DD" Format:
 
-    This is a code block.
+    import re
+
+    date_pattern = r"\d{4}-\d{2}-\d{2}"
+    dates = re.findall(date_pattern, "Today's date is 2023-05-24.")
+    print(dates)
     
-end code block.
+2. Extracting Email Domains:
 
+    import re
+
+    email_pattern = r"@(\w+\.\w+)"
+    email = "Contact us at email@example.com"
+    domain = re.findall(email_pattern, email)
+    print(domain)
+
+3. Removing Special Characters and Punctuation:
+
+    import re
+
+    text = "Hello! How are you? #Excited"
+    clean_text = re.sub(r"[^\w\s]", "", text)
+    print(clean_text)
 
 참고 : https://wikidocs.net/4308 (점프 투 파이썬 docs)
