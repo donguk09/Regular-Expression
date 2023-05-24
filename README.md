@@ -88,5 +88,5 @@ print(re.findall(re_email, email))
 # 적합한 형식의 문자열을 리스트로 추출
 ```
 
-
+***
 참고 : https://wikidocs.net/4308 (점프 투 파이썬 docs)
