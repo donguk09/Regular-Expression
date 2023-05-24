@@ -1,5 +1,5 @@
 # 정규 표현식 (Regular Expression)
-# [BIG:C:강동욱] 중간과제
+[BIG:C:강동욱] 중간과제
 
 
 
