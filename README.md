@@ -42,12 +42,12 @@
 # 3. 정규 표현식 사용 예제(python)
 
 1. Matching Dates in "YYYY-MM-DD" Format
-
-    import re
-    date_pattern = r"\d{4}-\d{2}-\d{2}"
-    dates = re.findall(date_pattern, "Today's date is 2023-05-24.")
-    print(dates)
-    
+```
+import re
+date_pattern = r"\d{4}-\d{2}-\d{2}"
+dates = re.findall(date_pattern, "Today's date is 2023-05-24.")
+print(dates)
+```
 end    
 2. Extracting Email Domains
 
