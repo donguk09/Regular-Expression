@@ -59,10 +59,10 @@ print(domain)
 ```
 3. Removing Special Characters and Punctuation
 ```python
-    import re
-    text = "Hello! How are you? #Excited"
-    clean_text = re.sub(r"[^\w\s]", "", text)
-    print(clean_text)
+import re
+text = "Hello! How are you? #Excited"
+clean_text = re.sub(r"[^\w\s]", "", text)
+print(clean_text)
 ```
 
 참고 : https://wikidocs.net/4308 (점프 투 파이썬 docs)
