@@ -62,25 +62,31 @@ print(m.match(date3))
 # None
 
 # 설명
-# '\d' 특수 기호를 사용하여 'YYYY-MM-DD' 형식의 날짜 데이터를 표현하는 정규 표현식(re_date) 생성
+# '\d' 특수 기호를 사용하여 'YYYY-MM-DD' 형식의 날짜 데이터를 표현하는 정규 표현식(re_date) 생성([0-9]{4}-[0-9]{2}-[0-9]{2}와 동일)
 # re 라이브러리의 match() 메소드를 사용하여 date1, date, date3 각각이 정규 표현식과 동일한 형식인지 검사
 # 적합한 경우 Match 객체 리턴, 부합한 경우 None 리턴
 ```
    
-2. Extracting Email Domains
+2. 문자열에서 이메일 형식의 데이터 추출
 ```python
 import re
-email_pattern = r"@(\w+\.\w+)"
-email = "Contact us at email@example.com"
-domain = re.findall(email_pattern, email)
-print(domain)
+
+re_email = r"\w+@\w+\.\w+\.*\w*"
+email = '''이메일 1 : 201945092@inhatc.ac.kr
+이메일2 : 201945092@naver.com
+이메일3 : 201945092.강동욱.com
+'''
+print(re.findall(re_email, email))
+
+# 출력결과
+# ['201945092@inhatc.ac.kr', '201945092@naver.com']
+
+# 설명
+# '\w' 특수 기호를 사용하여 이메일 형식의 데이터를 표현하는 정규 표현식(re_email) 생성
+# 정규표현식 [A-Za-z0-9_]+@[A-Za-z0-9_]+\.[A-Za-z0-9_]+(\.[A-Za-z0-9_]+)* 와 동일
+# re 라이브러리의 findall() 메소드를 사용하여 email 문자열에서 정규식에 적합한 형식의 문자열을 검색
+# 적합한 형식의 문자열을 리스트로 추출
 ```
-3. Removing Special Characters and Punctuation
-```python
-import re
-text = "Hello! How are you? #Excited"
-clean_text = re.sub(r"[^\w\s]", "", text)
-print(clean_text)
-```
+
 
 참고 : https://wikidocs.net/4308 (점프 투 파이썬 docs)
