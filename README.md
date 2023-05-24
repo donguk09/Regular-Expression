@@ -1,6 +1,5 @@
 # 정규 표현식 (Regular Expression)
-BigData report 1
-201945092 C반 강동욱
+# [BIG:C:강동욱] 중간과제
 
 
 
