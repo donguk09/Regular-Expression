@@ -41,12 +41,30 @@
 
 # 3. 정규 표현식 사용 예제(python)
 
-1. Matching Dates in "YYYY-MM-DD" Format
+1. 'YYYY-MM-DD' 형식의 날짜 데이터 매칭 확인
 ```python
 import re
-date_pattern = r"\d{4}-\d{2}-\d{2}"
-dates = re.findall(date_pattern, "Today's date is 2023-05-24.")
-print(dates)
+
+re_date = r"\d{4}-\d{2}-\d{2}"
+date1 = "2023-05-24"
+date2 = "23-05-24"
+date3 = "abcd-ef-gh"
+
+m = re.compile(re_date)
+
+print(m.match(date1))
+print(m.match(date2))
+print(m.match(date3))
+
+# 출력결과
+# <re.Match object; span=(0, 10), match='2023-05-24'>
+# None
+# None
+
+# 설명
+# '\d' 특수 기호를 사용하여 'YYYY-MM-DD' 형식의 날짜 데이터를 표현하는 정규 표현식(re_date) 생성
+# re 라이브러리의 match() 메소드를 사용하여 date1, date, date3 각각이 정규 표현식과 동일한 형식인지 검사
+# 적합한 경우 Match 객체 리턴, 부합한 경우 None 리턴
 ```
    
 2. Extracting Email Domains
