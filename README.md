@@ -41,10 +41,11 @@
 
 # 3. 정규 표현식 사용 예제(python)
 
-코드테스트
-  코드
-  코드2
-코드테스트
+This is a normal paragraph:
+
+    This is a code block.
+    
+end code block.
 
 
 참고 : https://wikidocs.net/4308 (점프 투 파이썬 docs)
