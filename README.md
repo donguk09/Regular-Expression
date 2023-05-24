@@ -48,6 +48,7 @@
     dates = re.findall(date_pattern, "Today's date is 2023-05-24.")
     print(dates)
     
+end    
 2. Extracting Email Domains
 
     import re
